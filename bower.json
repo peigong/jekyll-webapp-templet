@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
       "jekyll-blog-app": "https://github.com/peigong/jekyll-blog-app.git",
+      "jekyll-blog-templet": "https://github.com/peigong/jekyll-blog-templet.git",
       "jekyll-settings-sample": "https://github.com/peigong/jekyll-settings-sample.git"
   },
   "ignore": [

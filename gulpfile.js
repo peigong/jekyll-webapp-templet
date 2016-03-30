@@ -2,28 +2,34 @@ var gulp = require('gulp');
 var del = require('del');
 var runSequence = require('run-sequence');
 
+var config = {
+    app: './node_modules/jekyll-blog-app/dist',
+    templet: './bower_components/jekyll-blog-templet/jekyll',
+    src: './src/**',
+    dist: './blog'
+};
+
 // 清理目标目录
 gulp.task('build:clean', function(cb){
-    del(['./dist'], cb);
+    del([config.dist], cb);
 });
 
 // 复制jekyll-blog-app博客应用初始模板
 gulp.task('build:blog', function(){
-    gulp.src('./src/**')
-    .pipe(gulp.dest('./dist'));
+    gulp.src(config.src)
+    .pipe(gulp.dest(config.dist));
 });
 
 // 复制Jekyll模板
 gulp.task('build:jekyll', function(){
-    var base = './bower_components/jekyll-blog-templet/jekyll';
-    gulp.src(base + '/**', { base: base })
-    .pipe(gulp.dest('./dist'));
+    gulp.src(['**'], { base: config.templet })
+    .pipe(gulp.dest(config.dist));
 });
 
 // 构建jekyll-blog-app博客应用
 gulp.task('build:app', function(){
-    gulp.src(['scripts/**', 'styles/**', 'categories.json', 'settings.json', 'index.html'], { base: './node_modules/jekyll-blog-app/dist' })
-    .pipe(gulp.dest('./dist'));
+    gulp.src(['scripts/**', 'styles/**', 'categories.json', 'settings.json', 'index.html'], { base: config.app })
+    .pipe(gulp.dest(config.dist));
 });
 
 // 执行构建任务

@@ -22,7 +22,7 @@
   },
   "scripts": {
       "prebuild": "npm install && bower install",
-      "postinstall": "cd ./node_modules/jekyll-blog-app && npm run build && cd ..",
+      "postinstall": "cd ./node_modules/jekyll-blog-app && npm run build",
       "build": "gulp"
   },
   "engines": {

@@ -15,7 +15,7 @@ gulp.task('build:blog', function(){
 
 // 复制Jekyll模板
 gulp.task('build:jekyll', function(){
-    var base = './node_modules/jekyll-blog-templet/jekyll';
+    var base = './bower_components/jekyll-blog-templet/jekyll';
     gulp.src(base + '/**', { base: base })
     .pipe(gulp.dest('./dist'));
 });

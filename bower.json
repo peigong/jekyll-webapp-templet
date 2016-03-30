@@ -1,0 +1,20 @@
+{
+  "name": "jekyll-webapp-templet",
+  "description": "使用jekyll-blog-app项目的Jekyll博客模板",
+  "version": "0.0.1",
+  "homepage": "https://github.com/peigong/jekyll-webapp-templet",
+  "authors": [
+    "周培公 <peigong@foxmail.com>"
+  ],
+  "dependencies": {
+      "jekyll-blog-templet": "https://github.com/peigong/jekyll-blog-templet.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

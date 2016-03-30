@@ -4,16 +4,12 @@
 
 ## 模板的使用方法 ##
 
-- 执行 `npm install` 命令
-- 执行 `bower install` 命令
-- 执行 `gulp` 命令
+- 执行 `npm run build` 命令
 - 取出 `dist` 输出目录中的内容，并在此基础上创建自己的Jekyll博客。
 
 **在取出的博客目录中执行：**
 
-- 执行 `npm install` 命令
-- 执行 `bower install` 命令
-- 执行 `grunt` 命令
+- 执行 `npm run build` 命令
 
 ## Jekyll 的使用方法 ##
 
@@ -26,4 +22,3 @@
 ## bower 和 gulp ##
 
 略。
-

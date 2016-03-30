@@ -13,12 +13,18 @@
     "url": "git+https://github.com/peigong/jekyll-webapp-templet.git"
   },
   "dependencies": {
+      "jekyll-blog-templet": "https://github.com/peigong/jekyll-blog-templet.git",
+      "jekyll-blog-app": "https://github.com/peigong/jekyll-blog-app.git"
   },
   "devDependencies": {
     "del": "^1.2.1",
     "gulp": "^3.9.0",
-    "gulp-exec": "^2.1.2",
     "run-sequence": "^1.1.3"
+  },
+  "scripts": {
+      "prebuild": "npm install",
+      "postinstall": "cd ./node_modules/jekyll-blog-app && npm run build && cd ..",
+      "build": "gulp"
   },
   "engines": {
     "node": ">= 0.12"

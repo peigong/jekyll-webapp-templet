@@ -16,6 +16,10 @@
     "time-grunt": "^1.0.0",
     "load-grunt-tasks": "^0.6.0"
   },
+  "scripts": {
+      "prebuild": "npm install && bower install",
+      "build": "grunt"
+  },
   "engines": {
     "node": ">=0.10.0"
   }

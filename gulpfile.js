@@ -22,13 +22,13 @@ gulp.task('build:blog', function(){
 
 // 复制Jekyll模板
 gulp.task('build:jekyll', function(){
-    gulp.src(['**'], { base: config.templet })
+    gulp.src(['**'], { cwd: config.templet })
     .pipe(gulp.dest(config.dist));
 });
 
 // 构建jekyll-blog-app博客应用
 gulp.task('build:app', function(){
-    gulp.src(['scripts/**', 'styles/**', 'categories.json', 'settings.json', 'index.html'], { base: config.app })
+    gulp.src(['scripts/**', 'styles/**', 'categories.json', 'settings.json', 'index.html'], { cwd: config.app })
     .pipe(gulp.dest(config.dist));
 });
 
